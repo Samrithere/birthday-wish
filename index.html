@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wish</title>
+    <link rel="shortcut icon" href="cake.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Name Input Modal -->
+    <div id="nameModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Welcome</h2>
+                <p>Enter your beautiful name to get start with</p>
+            </div>
+            <div class="input-container">
+                <input type="text" id="nameInput" placeholder="Type your lovely name...." maxlength="20">
+                <button id="createCard" class="create-btn">Enter</button>
+            </div>
+            <div class="decoration">
+                <div class="sparkle">✨</div>
+                <div class="sparkle">💫</div>
+                <div class="sparkle">⭐</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Card Display -->
+    <div id="cardContainer" class="card-container hidden">
+        <div class="background-pattern"></div>
+        <div class="greeting-card">
+            <div class="card-header">
+                <h1>Hello Beautiful!</h1>
+            </div>
+            <div class="card-body">
+                <div class="name-display" id="nameClickArea">
+                    <span id="userName"></span>
+                    <div class="music-indicator hidden" id="musicIndicator">
+                        <div class="music-note">🎵</div>
+                        <div class="music-wave">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="message">
+                    Happy Birthday Sahrma ji ki! 🎉 I hope your day is as bright and special as your smile. Wishing you all the happiness today and for the rest of the year. And yes, save me a slice of cake 😄
+                    <p class=".samrit"><em>– Samrit</em></p>
+                </div>
+                <div class="decorative-elements">
+                    <div class="heart">💖</div>
+                    <div class="star">🌟</div>
+                    <div class="flower">🌸</div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <p>With love and best wishes</p>
+                <button id="changeNameBtn" class="change-name-btn">Close</button>
+            </div>
+        </div>
+        
+        <!-- Floating animations -->
+        <div class="floating-hearts">
+            <div class="floating-heart">💕</div>
+            <div class="floating-heart">💝</div>
+            <div class="floating-heart">🎈</div>
+            <div class="floating-heart">🦋</div>
+            <div class="floating-heart">🌺</div>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="backgroundMusic" loop>
+        <source src="background3.mp3" type="audio/mpeg">
+        <source src="https://www.soundjay.com/misc/sounds/magic-chime-02.wav" type="audio/wav">
+        <!-- Replace with your own music file -->
+        <!-- <source src="your-birthday-song.mp3" type="audio/mpeg"> -->
+    </audio>
+
+    <!-- Music Control Button -->
+    <div class="music-control hidden" id="musicControl">
+        <button id="musicToggle" class="music-btn">
+            <span id="musicIcon">🔇</span>
+        </button>
+        <div class="music-text">Click name to play music</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
